@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Grizzlies Zoetermeer | Honkbal, softbal en Beeball</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&amp;family=DM+Sans:wght@400;600;700;800&amp;display=swap">
+<!-- In FOYS: plaats deze CSS in het themaveld. De regels zijn afgebakend op .gz. -->
+<style>
+body { margin: 0; }
+.gz { --ink:#141b15; --green:#d0f471; --cream:#f5f3e9; --heading:"Barlow Condensed","Arial Narrow",sans-serif; background:var(--cream); color:var(--ink); font: 400 1rem/1.6 "DM Sans",system-ui,sans-serif; }
+.gz *, .gz *::before, .gz *::after { box-sizing:border-box; }
+.gz a { color:inherit; }
+.gz a:focus-visible { outline:3px solid #729a21; outline-offset:4px; }
+.gz h1,.gz h2,.gz h3 { color:inherit; font-family:var(--heading); font-weight:800; line-height:.93; margin:0; padding:0; }
+.gz-wrap { width:min(1220px, calc(100% - 40px)); margin-inline:auto; }
+.gz-header,.gz-footer { background:var(--ink); color:white; }
+.gz-header .gz-wrap,.gz-footer .gz-wrap { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem 2rem; padding-block:1.1rem; }
+.gz-brand { font:800 2rem/.86 var(--heading); text-decoration:none; display:grid; }
+.gz-brand small { color:var(--green); font:700 .65rem/1.8 "DM Sans",sans-serif; letter-spacing:.19em; }
+.gz-nav { display:flex; align-items:center; flex-wrap:wrap; gap:.7rem 1.4rem; }
+.gz-nav a { text-decoration:none; font-size:.88rem; font-weight:800; }
+.gz-nav a:hover { text-decoration:underline; }
+.gz .gz-button { display:inline-block; background:var(--green); color:var(--ink); padding:.68rem 1.1rem; text-decoration:none; font-weight:800; border-radius:4px; }
+.gz .gz-button:hover { background:white; color:var(--ink); }
+.gz-hero { display:grid; align-items:end; min-height:clamp(35rem,72vw,48rem); color:white; position:relative; isolation:isolate; background:#283728; }
+.gz-hero img,.gz-sport img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
+.gz-hero img { object-position:center 42%; }
+.gz-hero::before,.gz-sport::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,#101610f5,#10161075 60%,#10161020),linear-gradient(0deg,#101610c0,transparent 65%); }
+.gz-hero .gz-wrap { padding-block:4rem 5rem; }
+.gz-kicker { font-weight:800; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:var(--green); }
+.gz h1 { font-size:clamp(4.35rem,11vw,10rem); text-transform:uppercase; }
+.gz h1 span { display:block; color:var(--green); }
+.gz-hero p { max-width:37ch; margin-block:1.2rem; }
+.gz-quick { background:var(--green); }
+.gz-quick .gz-wrap { display:grid; grid-template-columns:repeat(3,1fr); }
+.gz-quick a { padding:1rem; text-decoration:none; font-weight:800; display:flex; justify-content:space-between; gap:.5rem; border-inline-end:1px solid #151b1538; }
+.gz-quick a:first-child { border-inline-start:1px solid #151b1538; }
+.gz-quick a:hover { background:#e5ffa2; }
+.gz-section { padding-block:clamp(3rem,7vw,6.5rem); }
+.gz h2 { font-size:clamp(3rem,6vw,5.5rem); text-transform:uppercase; }
+.gz-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.6rem; }
+.gz .gz-sport { color:white; display:grid; align-content:end; min-height:18rem; position:relative; isolation:isolate; overflow:hidden; text-decoration:none; padding:1.4rem; background:#2e4532; border-radius:6px; }
+.gz-sport::before { background:linear-gradient(0deg,#121b13ef,transparent 88%); }
+.gz-sport img { transition:transform .2s ease; }
+.gz-sport:hover img { transform:scale(1.045); }
+.gz-sport h3 { font-size:clamp(2.6rem,5vw,4rem); text-transform:uppercase; }
+.gz-sport span { font-size:.86rem; font-weight:800; color:var(--green); margin-top:.65rem; }
+.gz-club { background:#e7eadc; }
+.gz-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:1rem; }
+.gz-panel { padding:clamp(1.4rem,4vw,3rem); background:white; border-radius:6px; }
+.gz-panel:first-child { background:var(--ink); color:white; }
+.gz-panel h2 { font-size:clamp(2.65rem,5vw,4.4rem); }
+.gz-panel p { max-width:43ch; }
+.gz-panel a { font-weight:800; }
+.gz-support { display:flex; justify-content:space-between; align-items:center; gap:1rem 3rem; flex-wrap:wrap; }
+.gz-support .gz-button:hover { background:#e5ffa2; }
+@media(max-width:760px) {
+  .gz-hero { min-height:31rem; }
+  .gz-hero .gz-wrap { padding-bottom:2.75rem; }
+  .gz-grid { grid-template-columns:1fr; }
+  .gz-cards { grid-template-columns:1fr; }
+  .gz .gz-sport { min-height:15rem; }
+}
+@media(max-width:410px) {
+  .gz-quick .gz-wrap { grid-template-columns:1fr; }
+  .gz-quick a,.gz-quick a:first-child { border-inline:0; border-bottom:1px solid #151b1538; }
+}
+@media(prefers-reduced-motion:reduce) { .gz-sport img { transition:none; } }
+</style>
+</head>
+<body>
+<div class="gz">
+<!-- In FOYS: gebruik de bestaande sitenavigatie in plaats van deze header. -->
+<header class="gz-header">
+  <div class="gz-wrap">
+    <a class="gz-brand" href="./">GRIZZLIES<small>ZOETERMEER</small></a>
+    <nav class="gz-nav" aria-label="Hoofdnavigatie">
+      <a href="#sporten">Sporten</a>
+      <a href="#club">Clubnieuws</a>
+      <a href="https://grizzlies-zoetermeer.nl/contact/">Contact &amp; route</a>
+      <a href="https://grizzlies-zoetermeer.nl/mijn-club/">Mijn Grizzlies</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <!-- FOYS-contentblok: openingssectie en snelkoppelingen. -->
+  <section class="gz-hero" aria-labelledby="gz-welkom">
+    <img src="https://images.foys.io/foys/1cd1fd4d-9653-4834-8ba5-80af11744b78/33ca7782-517f-4254-9d57-4316f2d26016.png" alt="">
+    <div class="gz-wrap">
+      <p class="gz-kicker">Honkbal · Softbal · Beeball</p>
+      <h1 id="gz-welkom">Samen het <span>veld op.</span></h1>
+      <p>Ontdek honkbal, softbal en Beeball bij de Grizzlies in Zoetermeer. Van je eerste slag tot je volgende wedstrijd.</p>
+      <a class="gz-button" href="https://grizzlies-zoetermeer.nl/proeftraining/">Vraag een proeftraining aan ↗</a>
+    </div>
+  </section>
+  <nav class="gz-quick" aria-label="Snel naar">
+    <div class="gz-wrap">
+      <a href="https://grizzlies-zoetermeer.nl/programma/">Programma <span aria-hidden="true">↗</span></a>
+      <a href="https://grizzlies-zoetermeer.nl/uitslagen/">Uitslagen <span aria-hidden="true">↗</span></a>
+      <a href="https://grizzlies-zoetermeer.nl/over-ons/lidmaatschap/">Lid worden <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+  <!-- FOYS-contentblok: sportkaarten. -->
+  <section id="sporten" class="gz-section gz-wrap">
+    <h2>Kies je sport</h2>
+    <div class="gz-cards">
+      <a class="gz-sport" href="https://grizzlies-zoetermeer.nl/teams/">
+        <img src="https://images.foys.io/foys/1cd1fd4d-9653-4834-8ba5-80af11744b78/f050541e-f372-4d6e-b8c4-461465df5fac.jpg" alt="" loading="lazy">
+        <h3>Honkbal</h3><span>Bekijk de teams ↗</span>
+      </a>
+      <a class="gz-sport" href="https://grizzlies-zoetermeer.nl/teams/">
+        <img src="https://images.foys.io/foys/1cd1fd4d-9653-4834-8ba5-80af11744b78/85ddd70c-8b3f-49ce-a7d7-aa0dfe3ef578.png" alt="" loading="lazy">
+        <h3>Softbal</h3><span>Bekijk de teams ↗</span>
+      </a>
+      <a class="gz-sport" href="https://grizzlies-zoetermeer.nl/proeftraining/">
+        <h3>Beeball</h3><span>Kom een keer meetrainen ↗</span>
+      </a>
+    </div>
+  </section>
+  <!-- In FOYS: gebruik hier de bestaande kalender- en nieuwswidgets. -->
+  <section id="club" class="gz-section gz-club" aria-label="Agenda en clubnieuws">
+    <div class="gz-wrap gz-grid">
+      <article class="gz-panel">
+        <h2>Op de agenda</h2>
+        <p>Bekijk wanneer er gespeeld wordt en welke activiteiten eraan komen.</p>
+        <a class="gz-button" href="https://grizzlies-zoetermeer.nl/mijn-club/kalender">Open de clubagenda ↗</a>
+      </article>
+      <article class="gz-panel">
+        <h2>Clubnieuws</h2>
+        <p>Lees de laatste updates over teams, toernooien en vrijwilligerswerk.</p>
+        <a href="https://grizzlies-zoetermeer.nl/nieuws-overzicht">Lees het clubnieuws ↗</a>
+      </article>
+    </div>
+  </section>
+  <section class="gz-section gz-wrap gz-support">
+    <div><h2>Steun de club</h2><p>Help ons meer jeugd het veld op te krijgen.</p></div>
+    <a class="gz-button" href="https://grizzlies-zoetermeer.nl/over-ons/sponsoring/">Bekijk sponsormogelijkheden ↗</a>
+  </section>
+</main>
+<footer class="gz-footer">
+  <div class="gz-wrap">
+    <strong>Grizzlies Zoetermeer</strong>
+    <a href="mailto:info@grizzlies-zoetermeer.nl">info@grizzlies-zoetermeer.nl</a>
+    <small>Homepageconcept</small>
+  </div>
+</footer>
+</div>
+</body>
+</html>
